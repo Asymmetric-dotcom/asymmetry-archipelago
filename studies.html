@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فضاء الدراسات العليا | الأرخبيل اللا متناظر</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .space-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+        
+        .space-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #6a2a3a, transparent);
+        }
+        
+        .space-header h1 {
+            font-size: 32px;
+            color: #ffaacc;
+            margin-bottom: 12px;
+            text-shadow: 0 0 30px rgba(106, 42, 58, 0.6);
+        }
+        
+        .space-header p {
+            font-size: 15px;
+            color: #aa4a6a;
+            opacity: 0.9;
+        }
+        
+        .space-nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .space-nav a {
+            color: #aa4a6a;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        
+        .space-nav a:hover {
+            color: #ffaacc;
+            border-color: #6a2a3a;
+            background: rgba(106, 42, 58, 0.1);
+        }
+        
+        .space-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 40px 60px;
+        }
+        
+        .space-section {
+            margin-bottom: 48px;
+            padding: 24px;
+            border-right: 3px solid #6a2a3a;
+            background: rgba(106, 42, 58, 0.05);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .space-section h2 {
+            font-size: 22px;
+            color: #ffaacc;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(106, 42, 58, 0.3);
+        }
+        
+        .space-section p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #f0ccdd;
+            margin-bottom: 12px;
+        }
+        
+        .space-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .space-section ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(106, 42, 58, 0.15);
+            color: #ddaacc;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .space-section ul li:hover {
+            color: #ffaacc;
+            padding-right: 8px;
+        }
+        
+        .space-section ul li a {
+            color: #ffaacc;
+            text-decoration: none;
+        }
+        
+        .space-section ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .space-bridges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(106, 42, 58, 0.2);
+        }
+        
+        .space-bridges a {
+            color: #aa4a6a;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 8px 16px;
+            border: 1px solid rgba(106, 42, 58, 0.3);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .space-bridges a:hover {
+            color: #ffaacc;
+            border-color: #6a2a3a;
+            background: rgba(106, 42, 58, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .space-header h1 {
+                font-size: 24px;
+            }
+            
+            .space-content {
+                padding: 20px 16px 40px;
+            }
+            
+            .space-section {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="space-header">
+        <h1>فضاء الدراسات العليا</h1>
+        <p>دراسات وجودية. من البحث إلى المعنى. من التخصص إلى التكامل.</p>
+    </header>
+    
+    <nav class="space-nav">
+        <a href="index.html">البوابة</a>
+        <a href="#articles">أوراق</a>
+        <a href="#dialogues">حوارات</a>
+        <a href="#questions">أسئلة مفتوحة</a>
+    </nav>
+    
+    <main class="space-content">
+        
+        <section class="space-section">
+            <h2>المدخل</h2>
+            <p>
+                هذا الفضاء ليس مدونة. وليس أرشيفاً. إنه مكان للحوار حول الدراسات الوجودية.
+                من البحث إلى المعنى. من التخصص إلى التكامل.
+            </p>
+            <p>
+                هنا. نطرح أسئلة. لا نجيب عنها فقط. لأن الأسئلة أهم من الأجوبة.
+                وفتح الأفق أهم من الوصول إلى النهاية.
+            </p>
+            <p>
+                من أراد أن يشارك. فليحاور. من أراد أن يحاور. فليفكر. من أراد أن يفكر. فليسأل.
+            </p>
+        </section>
+        
+        <section class="space-section" id="articles">
+            <h2>أوراق</h2>
+            <ul>
+                <li><a href="#">الأنطولوجيا اللا متناظرة: مقدمة للباحثين</a></li>
+                <li><a href="#">منهجية البحث بين التخصص والتكامل</a></li>
+                <li><a href="#">الغائية التفاعلية: إطار للبحث المستقبلي</a></li>
+                <li><a href="#">الوعي والفيزياء: نحو بحث متعدد التخصصات</a></li>
+                <li><a href="#">الأخلاق الكونية: من المبادئ إلى التطبيق</a></li>
+            </ul>
+        </section>
+        
+        <section class="space-section" id="dialogues">
+            <h2>حوارات</h2>
+            <ul>
+                <li><a href="#">حوار مع باحث: كيف نكتب بحثاً لا متناظراً؟</a></li>
+                <li><a href="#">حوار مع مشرف: كيف نوجه البحث المتعدد التخصصات؟</a></li>
+                <li><a href="#">حوار مع طالب: ما دورنا في بناء الفضاء؟</a></li>
+                <li><a href="#">حوار مفتوح: ما معنى أن يكون البحث لا متناظراً؟</a></li>
+            </ul>
+        </section>
+        
+        <section class="space-section" id="questions">
+            <h2>أسئلة مفتوحة</h2>
+            <ul>
+                <li>كيف نبني منهجاً لا متناظراً للبحث؟</li>
+                <li>ما العلاقة بين التخصص والتكامل؟</li>
+                <li>كيف نكتب بحثاً يعبر عن رؤيتنا؟</li>
+                <li>ما دور الباحث في تشكيل الواقع؟</li>
+                <li>كيف ننشر بحثاً في فضاء مفتوح؟</li>
+                <li>ما مسؤوليتنا تجاه الفضاء الذي نبنيه؟</li>
+            </ul>
+        </section>
+        
+    </main>
+    
+    <nav class="space-bridges">
+        <a href="physics.html">فضاء الفيزياء</a>
+        <a href="philosophy.html">فضاء الفلسفة</a>
+        <a href="theology.html">فضاء اللاهوت</a>
+        <a href="consciousness.html">فضاء الوعي</a>
+        <a href="dialogue.html">فضاء الحوار</a>
+        <a href="index.html">البوابة</a>
+    </nav>
+    
+    <footer>
+        <p>هذا الفضاء مفتوح. لا مركز. لا سلطة. لا قيادة واحدة.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
