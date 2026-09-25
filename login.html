@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | الأرخبيل اللا متناظر</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+        
+        .login-box {
+            background: rgba(42, 74, 122, 0.05);
+            border: 1px solid rgba(74, 106, 154, 0.3);
+            border-radius: 12px;
+            padding: 48px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        
+        .login-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4a6a9a, transparent);
+        }
+        
+        .login-box h1 {
+            font-size: 28px;
+            color: #aaccff;
+            margin-bottom: 8px;
+            text-shadow: 0 0 30px rgba(74, 106, 154, 0.5);
+        }
+        
+        .login-box p {
+            font-size: 14px;
+            color: #4a6a9a;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        
+        .login-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #24292e;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .login-btn:hover {
+            background: #2f363d;
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        
+        .login-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 32px;
+            color: #4a6a9a;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #aaccff;
+        }
+        
+        .user-info {
+            display: none;
+        }
+        
+        .user-info.active {
+            display: block;
+        }
+        
+        .user-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2px solid #4a6a9a;
+            margin-bottom: 16px;
+        }
+        
+        .user-name {
+            font-size: 20px;
+            color: #aaccff;
+            margin-bottom: 8px;
+        }
+        
+        .user-login {
+            font-size: 14px;
+            color: #4a6a9a;
+            margin-bottom: 24px;
+        }
+        
+        .logout-btn {
+            background: rgba(170, 74, 106, 0.2);
+            color: #ffaacc;
+            border: 1px solid rgba(170, 74, 106, 0.4);
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(170, 74, 106, 0.3);
+            border-color: rgba(170, 74, 106, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>الأرخبيل اللا متناظر</h1>
+        <p>فضاء وجودي لا متناظر. جزر متعددة. حوار مستمر. وعي جماعي</p>
+    </header>
+    
+    <main>
+        <div class="login-container">
+            <div class="login-box">
+                
+                <div id="login-state">
+                    <h1>تسجيل الدخول</h1>
+                    <p>
+                        هذا الفضاء مفتوح للجميع. لكن. للفريق. تسجيل دخول.
+                        حتى نتعارف. حتى نتحاور. حتى نبني معاً.
+                    </p>
+                    <button id="github-login" class="login-btn">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        الدخول بحساب GitHub
+                    </button>
+                </div>
+                
+                <div id="user-state" class="user-info">
+                    <img id="user-avatar" class="user-avatar" src="" alt="">
+                    <div id="user-name" class="user-name"></div>
+                    <div id="user-login" class="user-login"></div>
+                    <button id="logout-btn" class="logout-btn">تسجيل الخروج</button>
+                </div>
+                
+                <a href="index.html" class="back-link">← العودة إلى البوابة</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>هذا الفضاء مفتوح. لا مركز. لا سلطة. لا قيادة واحدة.</p>
+    </footer>
+    
+    <script>
+        const GITHUB_CLIENT_ID = 'Ov23livHoMJZ22BKtqGl';
+        const GITHUB_REDIRECT_URI = 'https://asymmetric-dotcom.github.io/asymmetry-archipelago/login.html';
+        const GITHUB_AUTH_URL = 'https://github.com/login/oauth/authorize';
+        
+        const loginState = document.getElementById('login-state');
+        const userState = document.getElementById('user-state');
+        const githubLoginBtn = document.getElementById('github-login');
+        const logoutBtn = document.getElementById('logout-btn');
+        const userAvatar = document.getElementById('user-avatar');
+        const userName = document.getElementById('user-name');
+        const userLogin = document.getElementById('user-login');
+        
+        githubLoginBtn.addEventListener('click', function() {
+            const authUrl = GITHUB_AUTH_URL + 
+                '?client_id=' + GITHUB_CLIENT_ID +
+                '&redirect_uri=' + encodeURIComponent(GITHUB_REDIRECT_URI) +
+                '&scope=read:user';
+            window.location.href = authUrl;
+        });
+        
+        function checkAuth() {
+            const token = localStorage.getItem('github_token');
+            const user = localStorage.getItem('github_user');
+            
+            if (token && user) {
+                const userData = JSON.parse(user);
+                showUser(userData);
+            } else {
+                showLogin();
+            }
+        }
+        
+        function showUser(user) {
+            loginState.style.display = 'none';
+            userState.classList.add('active');
+            userAvatar.src = user.avatar_url;
+            userName.textContent = user.name || user.login;
+            userLogin.textContent = '@' + user.login;
+        }
+        
+        function showLogin() {
+            loginState.style.display = 'block';
+            userState.classList.remove('active');
+        }
+        
+        logoutBtn.addEventListener('click', function() {
+            localStorage.removeItem('github_token');
+            localStorage.removeItem('github_user');
+            showLogin();
+        });
+        
+        function handleCallback() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            
+            if (code) {
+                const mockUser = {
+                    login: 'asymmetric-dotcom',
+                    name: 'الأرخبيل اللا متناظر',
+                    avatar_url: 'https://github.com/asymmetric-dotcom.png'
+                };
+                
+                localStorage.setItem('github_token', code);
+                localStorage.setItem('github_user', JSON.stringify(mockUser));
+                showUser(mockUser);
+            }
+        }
+        
+        checkAuth();
+        handleCallback();
+    </script>
+</body>
+</html>
