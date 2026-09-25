@@ -1,1 +1,239 @@
-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فضاء الفلسفة | الأرخبيل اللا متناظر</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .space-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+        
+        .space-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4a2a6a, transparent);
+        }
+        
+        .space-header h1 {
+            font-size: 32px;
+            color: #ccaaFF;
+            margin-bottom: 12px;
+            text-shadow: 0 0 30px rgba(74, 42, 106, 0.6);
+        }
+        
+        .space-header p {
+            font-size: 15px;
+            color: #7a4aaa;
+            opacity: 0.9;
+        }
+        
+        .space-nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .space-nav a {
+            color: #7a4aaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        
+        .space-nav a:hover {
+            color: #ccaaFF;
+            border-color: #4a2a6a;
+            background: rgba(74, 42, 106, 0.1);
+        }
+        
+        .space-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 40px 60px;
+        }
+        
+        .space-section {
+            margin-bottom: 48px;
+            padding: 24px;
+            border-right: 3px solid #4a2a6a;
+            background: rgba(74, 42, 106, 0.05);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .space-section h2 {
+            font-size: 22px;
+            color: #ccaaFF;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(74, 42, 106, 0.3);
+        }
+        
+        .space-section p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #ddccee;
+            margin-bottom: 12px;
+        }
+        
+        .space-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .space-section ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(74, 42, 106, 0.15);
+            color: #bbaacc;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .space-section ul li:hover {
+            color: #ccaaFF;
+            padding-right: 8px;
+        }
+        
+        .space-section ul li a {
+            color: #ccaaFF;
+            text-decoration: none;
+        }
+        
+        .space-section ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .space-bridges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(74, 42, 106, 0.2);
+        }
+        
+        .space-bridges a {
+            color: #7a4aaa;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 8px 16px;
+            border: 1px solid rgba(74, 42, 106, 0.3);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .space-bridges a:hover {
+            color: #ccaaFF;
+            border-color: #4a2a6a;
+            background: rgba(74, 42, 106, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .space-header h1 {
+                font-size: 24px;
+            }
+            
+            .space-content {
+                padding: 20px 16px 40px;
+            }
+            
+            .space-section {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="space-header">
+        <h1>فضاء الفلسفة</h1>
+        <p>فلسفة الوجود. من المجرد إلى المشروط. من الوحدة إلى الكثرة.</p>
+    </header>
+    
+    <nav class="space-nav">
+        <a href="index.html">البوابة</a>
+        <a href="#articles">مقالات</a>
+        <a href="#dialogues">حوارات</a>
+        <a href="#questions">أسئلة مفتوحة</a>
+    </nav>
+    
+    <main class="space-content">
+        
+        <section class="space-section">
+            <h2>المدخل</h2>
+            <p>
+                هذا الفضاء ليس مدونة. وليس أرشيفاً. إنه مكان للحوار حول فلسفة الوجود.
+                من المجرد إلى المشروط. من الوحدة إلى الكثرة.
+            </p>
+            <p>
+                هنا. نطرح أسئلة. لا نجيب عنها فقط. لأن الأسئلة أهم من الأجوبة.
+                وفتح الأفق أهم من الوصول إلى النهاية.
+            </p>
+            <p>
+                من أراد أن يشارك. فليحاور. من أراد أن يحاور. فليفكر. من أراد أن يفكر. فليسأل.
+            </p>
+        </section>
+        
+        <section class="space-section" id="articles">
+            <h2>مقالات</h2>
+            <ul>
+                <li><a href="#">ما الوجود؟ من الجوهر إلى العلاقة</a></li>
+                <li><a href="#">تجاوز الثنائيات: المادة والروح. الضرورة والحرية</a></li>
+                <li><a href="#">اللا تناظر كأساس لأنطولوجيا جديدة</a></li>
+                <li><a href="#">المشكلة الصعبة للوعي: منظور أنطولوجي</a></li>
+                <li><a href="#">الغائية التفاعلية: من التصميم إلى الحوار</a></li>
+            </ul>
+        </section>
+        
+        <section class="space-section" id="dialogues">
+            <h2>حوارات</h2>
+            <ul>
+                <li><a href="#">حوار مع فيزيائي: هل الفلسفة ضرورية للفيزياء؟</a></li>
+                <li><a href="#">حوار مع لاهوتي: هل يمكن تفسير الشر فلسفياً؟</a></li>
+                <li><a href="#">حوار مع عالم وعي: هل الوعي مشكلة فلسفية أم علمية؟</a></li>
+                <li><a href="#">حوار مفتوح: ما معنى أن يكون الوجود لا متناظراً؟</a></li>
+            </ul>
+        </section>
+        
+        <section class="space-section" id="questions">
+            <h2>أسئلة مفتوحة</h2>
+            <ul>
+                <li>ما العلاقة بين الوجود والماهية؟</li>
+                <li>هل الحرية وهم أم حقيقة؟</li>
+                <li>ما مصدر القيم الأخلاقية؟</li>
+                <li>هل يمكن إثبات وجود الله فلسفياً؟</li>
+                <li>ما معنى التاريخ؟ وهل له غاية؟</li>
+                <li>هل العقل قادر على فهم الوجود كاملاً؟</li>
+            </ul>
+        </section>
+        
+    </main>
+    
+    <nav class="space-bridges">
+        <a href="physics.html">فضاء الفيزياء</a>
+        <a href="theology.html">فضاء اللاهوت</a>
+        <a href="consciousness.html">فضاء الوعي</a>
+        <a href="studies.html">فضاء الدراسات العليا</a>
+        <a href="dialogue.html">فضاء الحوار</a>
+        <a href="index.html">البوابة</a>
+    </nav>
+    
+    <footer>
+        <p>هذا الفضاء مفتوح. لا مركز. لا سلطة. لا قيادة واحدة.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
