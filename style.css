@@ -1,6 +1,8 @@
 /* ============================================
-   الأرخبيل اللا متناظر - التصميم
+   الأرخبيل اللا متناظر - التصميم الجديد
    ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -14,19 +16,90 @@ html {
 
 body {
     font-family: 'Amiri', 'Noto Naskh Arabic', 'Times New Roman', serif;
-    background: #0a0e1a;
+    background: #050810;
     color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     direction: rtl;
     overflow-x: hidden;
+    position: relative;
 }
+
+/* ============================================
+   الخلفية: فضاء حي
+   ============================================ */
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at 20% 30%, rgba(42, 74, 122, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(74, 42, 106, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(42, 106, 90, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 20%, rgba(106, 74, 42, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 30% 80%, rgba(170, 74, 106, 0.06) 0%, transparent 50%);
+    z-index: -2;
+    animation: backgroundShift 20s ease-in-out infinite;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 30% 50%, rgba(255, 255, 255, 0.2), transparent),
+        radial-gradient(1px 1px at 50% 80%, rgba(255, 255, 255, 0.25), transparent),
+        radial-gradient(1px 1px at 70% 30%, rgba(255, 255, 255, 0.2), transparent),
+        radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 15% 90%, rgba(255, 255, 255, 0.15), transparent),
+        radial-gradient(1px 1px at 85% 10%, rgba(255, 255, 255, 0.2), transparent),
+        radial-gradient(1px 1px at 45% 15%, rgba(255, 255, 255, 0.25), transparent),
+        radial-gradient(1px 1px at 65% 85%, rgba(255, 255, 255, 0.15), transparent),
+        radial-gradient(1px 1px at 25% 65%, rgba(255, 255, 255, 0.2), transparent);
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    z-index: -1;
+    animation: starsTwinkle 8s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes starsTwinkle {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   الترويسة
+   ============================================ */
 
 header {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 80px 20px 40px;
     position: relative;
+    z-index: 1;
 }
 
 header::before {
@@ -35,34 +108,134 @@ header::before {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #4a6a9a, transparent);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4a6a9a, #7a4aaa, #4a6a9a, transparent);
+    animation: lineGlow 4s ease-in-out infinite;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4a6a9a;
+    box-shadow: 0 0 20px #4a6a9a, 0 0 40px #4a6a9a;
+    animation: dotPulse 3s ease-in-out infinite;
+}
+
+@keyframes lineGlow {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes dotPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px #4a6a9a, 0 0 40px #4a6a9a;
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        box-shadow: 0 0 30px #4a6a9a, 0 0 60px #4a6a9a;
+        transform: translateX(-50%) scale(1.3);
+    }
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 700;
     color: #ffffff;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 16px;
-    text-shadow: 0 0 30px rgba(74, 106, 154, 0.5);
-    animation: titleGlow 4s ease-in-out infinite;
+    text-shadow: 
+        0 0 20px rgba(74, 106, 154, 0.8),
+        0 0 40px rgba(74, 106, 154, 0.4),
+        0 0 80px rgba(74, 106, 154, 0.2);
+    animation: titleGlow 5s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px rgba(74, 106, 154, 0.8),
+            0 0 40px rgba(74, 106, 154, 0.4),
+            0 0 80px rgba(74, 106, 154, 0.2);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px rgba(74, 106, 154, 1),
+            0 0 60px rgba(74, 106, 154, 0.6),
+            0 0 120px rgba(74, 106, 154, 0.3);
+    }
 }
 
 header p {
-    font-size: 16px;
-    color: #4a6a9a;
-    letter-spacing: 1px;
+    font-size: 18px;
+    color: #7a9aba;
+    letter-spacing: 2px;
     opacity: 0.9;
+    animation: subtitleFade 6s ease-in-out infinite;
 }
+
+@keyframes subtitleFade {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   زر تسجيل الدخول
+   ============================================ */
+
+header nav {
+    margin-top: 24px;
+}
+
+header nav a {
+    display: inline-block;
+    color: #7a9aba;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 28px;
+    border: 1px solid rgba(74, 106, 154, 0.4);
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    background: rgba(42, 74, 122, 0.1);
+    backdrop-filter: blur(10px);
+    letter-spacing: 1px;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    border-color: #4a6a9a;
+    background: rgba(42, 74, 122, 0.3);
+    box-shadow: 0 0 30px rgba(74, 106, 154, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   الخريطة
+   ============================================ */
 
 main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 #map-container {
@@ -78,13 +251,28 @@ main {
 #map-container svg {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 0 40px rgba(74, 106, 154, 0.3));
+    filter: drop-shadow(0 0 60px rgba(74, 106, 154, 0.4));
+    animation: mapFloat 10s ease-in-out infinite;
 }
+
+@keyframes mapFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.01);
+    }
+}
+
+/* ============================================
+   التذييل
+   ============================================ */
 
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
     position: relative;
+    z-index: 1;
 }
 
 footer::before {
@@ -93,31 +281,36 @@ footer::before {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
+    width: 40%;
     height: 1px;
     background: linear-gradient(90deg, transparent, #4a6a9a, transparent);
 }
 
 footer p {
-    font-size: 13px;
+    font-size: 14px;
     color: #4a6a9a;
     opacity: 0.7;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    animation: footerFade 7s ease-in-out infinite;
 }
 
-@keyframes titleGlow {
+@keyframes footerFade {
     0%, 100% {
-        text-shadow: 0 0 30px rgba(74, 106, 154, 0.5);
+        opacity: 0.5;
     }
     50% {
-        text-shadow: 0 0 50px rgba(74, 106, 154, 0.8);
+        opacity: 0.8;
     }
 }
+
+/* ============================================
+   الحركات
+   ============================================ */
 
 @keyframes breathe {
     0%, 100% {
         transform: scale(1);
-        opacity: 0.95;
+        opacity: 0.9;
     }
     50% {
         transform: scale(1.02);
@@ -127,37 +320,52 @@ footer p {
 
 @keyframes bridgePulse {
     0%, 100% {
-        opacity: 0.4;
+        opacity: 0.3;
     }
     50% {
-        opacity: 0.8;
+        opacity: 0.7;
     }
 }
 
 @keyframes dotTwinkle {
     0%, 100% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
     50% {
-        opacity: 0.5;
+        opacity: 0.4;
     }
 }
 
+@keyframes islandFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ============================================
+   التجاوب
+   ============================================ */
+
 @media (max-width: 768px) {
     header {
-        padding: 40px 16px 30px;
+        padding: 50px 16px 30px;
     }
     
     header h1 {
-        font-size: 24px;
+        font-size: 28px;
+        letter-spacing: 1px;
     }
     
     header p {
-        font-size: 13px;
+        font-size: 14px;
+        letter-spacing: 1px;
     }
     
     main {
-        padding: 20px 12px;
+        padding: 10px;
     }
     
     #map-container {
@@ -174,11 +382,20 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    header {
+        padding: 40px 12px 20px;
+    }
+    
     header h1 {
-        font-size: 20px;
+        font-size: 22px;
     }
     
     header p {
-        font-size: 11px;
+        font-size: 12px;
+    }
+    
+    header nav a {
+        font-size: 12px;
+        padding: 8px 20px;
     }
 }
