@@ -1,0 +1,184 @@
+/* ============================================
+   الأرخبيل اللا متناظر - التصميم
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Amiri', 'Noto Naskh Arabic', 'Times New Roman', serif;
+    background: #0a0e1a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4a6a9a, transparent);
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-shadow: 0 0 30px rgba(74, 106, 154, 0.5);
+    animation: titleGlow 4s ease-in-out infinite;
+}
+
+header p {
+    font-size: 16px;
+    color: #4a6a9a;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#map-container {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map-container svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 40px rgba(74, 106, 154, 0.3));
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4a6a9a, transparent);
+}
+
+footer p {
+    font-size: 13px;
+    color: #4a6a9a;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 0 0 30px rgba(74, 106, 154, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 50px rgba(74, 106, 154, 0.8);
+    }
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.95;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 1;
+    }
+}
+
+@keyframes bridgePulse {
+    0%, 100% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes dotTwinkle {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 40px 16px 30px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+    
+    header p {
+        font-size: 13px;
+    }
+    
+    main {
+        padding: 20px 12px;
+    }
+    
+    #map-container {
+        max-width: 100%;
+    }
+    
+    footer {
+        padding: 30px 16px;
+    }
+    
+    footer p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+    
+    header p {
+        font-size: 11px;
+    }
+}
