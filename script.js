@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- الجزر -->
             <g id="islands">
                 <!-- جزيرة الفيزياء -->
-                <a href="physics.html" target="_blank">
+                <a href="physics.html">
                     <g class="island" data-name="الفيزياء">
                         <polygon points="200,450 240,360 280,400 320,340 360,420 300,470 230,480" 
                                  fill="#2a4a7a" stroke="#4a7aaa" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
                 
                 <!-- جزيرة الفلسفة -->
-                <a href="philosophy.html" target="_blank">
+                <a href="philosophy.html">
                     <g class="island" data-name="الفلسفة">
                         <circle cx="480" cy="340" r="70" fill="#4a2a6a" stroke="#7a4aaa" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
                         <text x="480" y="350" text-anchor="middle" font-family="Amiri, serif" font-size="22" fill="#ccaaFF" font-weight="bold">فلسفة</text>
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
                 
                 <!-- جزيرة اللاهوت -->
-                <a href="theology.html" target="_blank">
+                <a href="theology.html">
                     <g class="island" data-name="اللاهوت">
                         <ellipse cx="680" cy="380" rx="80" ry="55" fill="#6a4a2a" stroke="#aa7a4a" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
                         <text x="680" y="390" text-anchor="middle" font-family="Amiri, serif" font-size="22" fill="#ffddaa" font-weight="bold">لاهوت</text>
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
                 
                 <!-- جزيرة الوعي -->
-                <a href="consciousness.html" target="_blank">
+                <a href="consciousness.html">
                     <g class="island" data-name="الوعي">
                         <polygon points="300,600 320,640 360,640 330,665 340,705 300,680 260,705 270,665 240,640 280,640" 
                                  fill="#2a6a5a" stroke="#4aaa8a" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
                 
                 <!-- جزيرة الدراسات العليا -->
-                <a href="studies.html" target="_blank">
+                <a href="studies.html">
                     <g class="island" data-name="الدراسات العليا">
                         <polygon points="500,580 560,580 530,520" 
                                  fill="#6a2a3a" stroke="#aa4a6a" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
                 
                 <!-- جزيرة الحوار -->
-                <a href="dialogue.html" target="_blank">
+                <a href="dialogue.html">
                     <g class="island" data-name="الحوار">
                         <polygon points="640,600 680,620 710,590 740,610 720,650 680,640 650,670 630,630 620,650" 
                                  fill="#3a5a2a" stroke="#6a9a4a" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
