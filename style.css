@@ -244,5 +244,38 @@ footer p {
     
     .icon-desc {
         font-size: 10px;
+    }/* ============================================
+   رمز الأرخبيل
+   ============================================ */
+
+.header-logo,
+.space-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.header-logo svg {
+    width: 160px;
+    height: 160px;
+    filter: drop-shadow(0 0 25px rgba(201, 169, 97, 0.5));
+}
+
+.space-logo svg {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 15px rgba(201, 169, 97, 0.4));
+}
+
+@media (max-width: 768px) {
+    .header-logo svg {
+        width: 100px;
+        height: 100px;
     }
+    
+    .space-logo svg {
+        width: 70px;
+        height: 70px;
+    }
+}
 }
