@@ -276,6 +276,27 @@ footer p {
     .space-logo svg {
         width: 70px;
         height: 70px;
+    }/* ============================================
+   رمز البوابة
+   ============================================ */
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.header-logo svg {
+    width: 160px;
+    height: 160px;
+    filter: drop-shadow(0 0 25px rgba(201, 169, 97, 0.5));
+}
+
+@media (max-width: 768px) {
+    .header-logo svg {
+        width: 100px;
+        height: 100px;
     }
+}
 }
 }
